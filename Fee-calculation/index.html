@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+	<script type="text/javascript" src="./js/calc.js"></script>
+	<link href="./css/style.css" media="all" rel="stylesheet"/>
+<title></title>
+</head>
+<body>
+
+	<h1>料金</h1>
+	<section>
+		<div>
+			<form>
+			<table>
+				<tr>
+					<th>申し込み形態</th>
+					<td><input type="radio" name="discount" value=500 checked="checked"/>団体
+					&nbsp;
+					<input type="radio" name="discount" value=0/>個人
+				</tr>
+				<tr>
+					<th>シャツの種類</th>
+					<td><input type="radio" name="skind" value=1100 checked="checked"/>T-シャツ
+					&nbsp;
+					<input type="radio" name="skind" value=1600/>ポロシャツ
+				</tr>
+				<tr>
+					<th>プリントの種類</th>
+					<td><input type="radio" name="pkind" value=1000 checked="checked"/>ワンポイントプリント
+					&nbsp;
+					<input type="radio" name="pkind" value=1500/>フリーサイズプリント
+				</tr>
+				<tr>
+					<th>プリントする面</th>
+					<td><input type="radio" name="area" value="1" checked="checked"/>片面
+					&nbsp;
+					<input type="radio" name="area" value="2"/>両面
+				</tr>
+				<tr>
+					<th>個数</th>
+					<td><input type="text" name="number"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="reset" value="クリア"/>
+						<input type="button" value="計算" onclick = "calc(this.form)"/>
+					</td>
+				</tr>
+
+			</table>
+			</form>
+		</div>
+	</section>
+	<section>
+		<div>
+			<h2>計算結果</h2>
+			<p>計算結果&nbsp;<span id="result"></span>円</p>
+		</div>
+	</section>
+
+</body>
+</html>
